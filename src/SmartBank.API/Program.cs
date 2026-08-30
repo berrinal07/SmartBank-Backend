@@ -12,6 +12,8 @@ using SmartBank.Application.Validators;
 using SmartBank.Application.Transfers.Interfaces;
 using SmartBank.Application.Transfers.Services;
 using SmartBank.Application.Transactions.Services;
+using SmartBank.Application.Notifications.Interfaces;
+using SmartBank.Application.Notifications.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -60,6 +62,9 @@ builder.Services.AddAuthorization();
 builder.Services.AddScoped<IPasswordHasher, BCryptPasswordHasher>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddScoped<INotificationRepository, NotificationRepository>();
+builder.Services.AddScoped<INotificationService, NotificationService>();
 
 builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
