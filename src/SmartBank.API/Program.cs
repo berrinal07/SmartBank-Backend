@@ -70,6 +70,8 @@ builder.Services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 
 builder.Services.AddScoped<IAuthService, AuthService>();
 
+builder.Services.AddScoped<IUserService, UserService>();
+
 builder.Services.AddScoped<IJwtService, JwtService>();
 
 builder.Services.AddScoped<IAccountRepository, AccountRepository>();
