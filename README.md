@@ -4,7 +4,7 @@ SmartBank, temel bankacılık işlemlerini simüle etmek amacıyla geliştirilmi
 
 Backend tarafı **ASP.NET Core Web API**, **Entity Framework Core** ve **PostgreSQL** kullanılarak geliştirilmiştir. Proje; kullanıcı yönetimi, kimlik doğrulama, hesap yönetimi, para transferleri, işlem geçmişi ve bildirim gibi temel bankacılık işlemlerini desteklemektedir.
 
-## 🚀 Özellikler
+##  Özellikler
 
 * Kullanıcı  giriş işlemleri
 * JWT Access Token ve Refresh Token authentication
@@ -25,7 +25,7 @@ Backend tarafı **ASP.NET Core Web API**, **Entity Framework Core** ve **Postgre
 * Transfer sonrası bildirim oluşturma
 * Bildirimleri listeleme
 
-## 🛠️ Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 * .NET 10
 * ASP.NET Core Web API
@@ -37,7 +37,7 @@ Backend tarafı **ASP.NET Core Web API**, **Entity Framework Core** ve **Postgre
 * BCrypt
 * FluentValidation
 
-## 🏗️ Mimari
+##  Mimari
 
 Proje katmanlı bir mimari kullanmaktadır.
 
@@ -89,7 +89,7 @@ Veritabanı ve dış kaynaklarla iletişimden sorumlu katmandır.
 * PostgreSQL bağlantısı
 * Migration'lar
 
-## 📁 Proje Yapısı
+##  Proje Yapısı
 
 ```text
 SmartBank-Backend/
@@ -119,7 +119,7 @@ SmartBank-Backend/
 └── .gitignore
 ```
 
-## 💾 Veritabanı
+##  Veritabanı
 
 SmartBank backend tarafında **PostgreSQL 17** kullanılmaktadır.
 
@@ -149,7 +149,7 @@ User
  └── Notifications
 ```
 
-## 🔐 Authentication
+##  Authentication
 
 Kimlik doğrulama JWT tabanlı olarak gerçekleştirilmektedir.
 
@@ -173,7 +173,7 @@ Refresh Token
 Yeni Access Token
 ```
 
-## 🏦 Hesap Yönetimi
+##  Hesap Yönetimi
 
 Sistem iki farklı hesap türünü desteklemektedir:
 
@@ -189,7 +189,7 @@ Kullanıcılar:
 * Hesap detaylarını görüntüleyebilir
 * Birden fazla hesaba sahip olabilir
 
-## 💸 Para Transferleri
+##  Para Transferleri
 
 Transfer sistemi hem kullanıcının kendi hesapları arasında hem de farklı kullanıcıların hesapları arasında transfer yapılmasını desteklemektedir.
 
@@ -203,13 +203,13 @@ Transfer sırasında:
 * İlgili hesap bakiyeleri güncellenir
 * Bildirim oluşturulur
 
-## 📋 İşlem Geçmişi
+##  İşlem Geçmişi
 
 Kullanıcıların gerçekleştirdiği transfer işlemleri Transaction kayıtları üzerinden tutulmaktadır.
 
 İşlem geçmişi listeleme işlemi pagination desteği ile gerçekleştirilmektedir.
 
-## 🔔 Bildirimler
+##  Bildirimler
 
 Transfer işlemleri sonrasında kullanıcılar için bildirim oluşturulmaktadır.
 
@@ -219,7 +219,7 @@ Kullanıcılar:
 * Okunmamış bildirimlerini görebilir
 * Bildirimleri okundu olarak işaretleyebilir
 
-## 👤 Kullanıcı Profili
+##  Kullanıcı Profili
 
 Kullanıcılar kendi profil bilgilerini görüntüleyebilir ve güncelleyebilir.
 
@@ -231,7 +231,7 @@ Desteklenen işlemler:
 * Telefon numarası güncelleme
 * Şifre değiştirme
 
-## ⚙️ Gereksinimler
+##  Gereksinimler
 
 Projeyi çalıştırmak için aşağıdakilerin kurulu olması gerekir:
 
@@ -245,7 +245,7 @@ Projeyi çalıştırmak için aşağıdakilerin kurulu olması gerekir:
 dotnet --version
 ```
 
-## 📥 Kurulum
+##  Kurulum
 
 Repository'yi klonlayın:
 
@@ -265,7 +265,7 @@ NuGet paketlerini yükleyin:
 dotnet restore
 ```
 
-## 🗄️ PostgreSQL Yapılandırması
+##  PostgreSQL Yapılandırması
 
 PostgreSQL üzerinde `smartbank_db` isimli bir database oluşturulmalıdır.
 
@@ -273,7 +273,7 @@ Uygulamanın connection string'i kendi PostgreSQL bilgilerinizle yapılandırıl
 
 > Gerçek şifreler, connection string içerisindeki hassas bilgiler veya JWT secret gibi gizli bilgiler GitHub'a gönderilmemelidir.
 
-## 🔨 Database Migration
+##  Database Migration
 
 Mevcut migration'ları veritabanına uygulamak için:
 
@@ -287,7 +287,7 @@ Yeni migration oluşturmak için:
 dotnet ef migrations add MigrationName
 ```
 
-## ▶️ Uygulamayı Çalıştırma
+##  Uygulamayı Çalıştırma
 
 Backend'i çalıştırmak için:
 
@@ -297,7 +297,7 @@ dotnet run --project src/SmartBank.API
 
 API çalıştıktan sonra uygulamanın kullandığı API adresi üzerinden endpointlere erişilebilir.
 
-## 🧪 Test
+##  Test
 
 Backend geliştirme sürecinde API endpointleri manuel olarak test edilmiştir.
 
@@ -315,7 +315,7 @@ Test edilen temel işlemler:
 * Profil güncelleme
 * Şifre değiştirme
 
-## 🌿 Git Branch Strategy
+##  Git Branch Strategy
 
 Projede iki temel branch kullanılmaktadır:
 
@@ -335,7 +335,7 @@ Aktif geliştirme branch'idir.
 
 Yeni geliştirmeler öncelikle `develop` branch'i üzerinde yapılmaktadır.
 
-## 📱 Mobile Application
+##  Mobile Application
 
 SmartBank'in Flutter ile geliştirilmiş mobil uygulaması ayrı bir repository'de bulunmaktadır.
 
@@ -343,7 +343,7 @@ SmartBank'in Flutter ile geliştirilmiş mobil uygulaması ayrı bir repository'
 
 Mobil uygulama backend API ile iletişim kurmaktadır.
 
-## 📌 Proje Durumu
+##  Proje Durumu
 
 SmartBank backend tarafında aşağıdaki temel modüller geliştirilmiştir:
 
